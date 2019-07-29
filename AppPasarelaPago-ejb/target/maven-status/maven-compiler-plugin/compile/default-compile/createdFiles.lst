@@ -1,0 +1,14 @@
+com\udea\dao\AbstractFacade.class
+com\udea\modelo\Transaccion_.class
+com\udea\modelo\Articulo_.class
+com\udea\dao\TransaccionFacade.class
+com\udea\modelo\Transaccion.class
+com\udea\NewSessionBean.class
+com\udea\dao\TransaccionFacadeLocal.class
+com\udea\dao\ComprobanteFacade.class
+com\udea\modelo\Comprobante_.class
+com\udea\dao\ArticuloFacade.class
+com\udea\modelo\Comprobante.class
+com\udea\dao\ArticuloFacadeLocal.class
+com\udea\modelo\Articulo.class
+com\udea\dao\ComprobanteFacadeLocal.class

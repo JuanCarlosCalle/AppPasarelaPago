@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <title>Comprobante de la Transacción</title>
+    </h:head>
+    <h:body>
+        <div class="container" style="text-align: center">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active sizeLetras"><a href="#">Recibo</a></li>
+                <li role="presentation" class="sizeLetras"><h:link outcome="#{carritoMBean.volverAInicio()}"  value="Volver al inicio" /></li>
+            </ul>
+            
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                <h:form>
+                    <h1>
+                        <h:outputText value="Recibo de transaccion" />
+                    </h1>
+                    <p:panelGrid columns="2">
+                        <f:facet name="Header">
+                            Comprobante de pago
+                        </f:facet>
+                        <h:outputLabel value="Identificacion" for="identificacion" />
+                        <h:outputText value="#{transaccionMBean.duiCliente}" />
+                        <h:outputLabel value="NombreCliente:" for="nombreCliente" />
+                        <h:outputText value="#{transaccionMBean.nombreCliente}" />
+                        <h:outputLabel value="Email:" for="email" />
+                        <h:outputText value="#{transaccionMBean.email}" />
+                        <h:outputLabel value="NumTCredito:" for="numTCredito" />
+                        <h:outputText value="#{transaccionMBean.numTCredito}" />
+                        <h:outputLabel value="TipoTCredito:" for="tipoTCredito" />
+                        <h:outputText value="#{transaccionMBean.tipoTCredito}" />
+                        <h:outputLabel value="ValorTotal:" for="valorTotal" />
+                        <h:outputText value="#{transaccionMBean.valorTotal}" />
+                    </p:panelGrid>
+                    <p:column headerText="Qr Code">
+                        <p:barcode value="#{transaccionMBean.duiCliente} #{transaccionMBean.valorTotal} #{transaccionMBean.fVenceTCredito}" type="qr" width="200px" height="200px"/>
+                    </p:column>
+                </h:form>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
