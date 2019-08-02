@@ -13,46 +13,6 @@
         <managed-bean-class>com.udea.controller.TransaccionMBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
-    <navigation-rule>
-        <from-view-id>/index.html</from-view-id>
-        <navigation-case>
-            <from-outcome>VERARTICULOS</from-outcome>
-            <to-view-id>/ShopCar.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/ShopCar.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>INICIO</from-outcome>
-            <to-view-id>/index.html</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>PASARACAJA</from-outcome>
-            <to-view-id>/CheckOut.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/CheckOut.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>INICIO</from-outcome>
-            <to-view-id>/index.html</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>VOLVERATIENDA</from-outcome>
-            <to-view-id>/ShopCar.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>PAGAR</from-outcome>
-            <to-view-id>/Bill.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/Bill.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>INICIO</from-outcome>
-            <to-view-id>/index.html</to-view-id>
-        </navigation-case>
-    </navigation-rule>
     
     <application>
     <locale-config>
@@ -75,4 +35,44 @@
         <managed-bean-class>com.udea.controller.Captcha</managed-bean-class>
     
         <managed-bean-scope>request</managed-bean-scope></managed-bean>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>VERARTICULOS</from-outcome>
+            <to-view-id>/ShopCar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/ShopCar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>PASARACAJA</from-outcome>
+            <to-view-id>/CheckOut.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>INICIO</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/CheckOut.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>PAGAR</from-outcome>
+            <to-view-id>/Bill.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>INICIO</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>VOLVER A TIENDA</from-outcome>
+            <to-view-id>/ShopCar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Bill.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>INICIO</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
