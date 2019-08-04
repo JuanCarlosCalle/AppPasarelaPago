@@ -35,9 +35,14 @@
                     -->
                     <br />
                     <h:panelGrid columns="2">
-                        <f:facet name="header">
-                            Registro de la transacción
+                         
+                        <f:facet name="header" >
+                            
+                           -----INFORMACION DE LA TRANSACCION:-----
+                            
                         </f:facet>
+                        
+                        
                         
                         <p:outputLabel value="Identificacion" for="identificacion" />
                         <p:inputText id="identificacion" value="#{transaccionMBean.duiCliente}" title="Identificacion" required="true" requiredMessage="The Identificacion field is required." maxlength="20" />                
@@ -52,11 +57,22 @@
                         <p:inputText id="cvvTCredito" value="#{transaccionMBean.cvvTCredito}" title="CvvTCredito" required="true" requiredMessage="The CvvTCredito field is required." maxlength="3">
                             <f:validateLength minimum="3" />
                         </p:inputText>
-                        <p:outputLabel value="TipoTCredito:" for="tipoTCredito" />
-                        <p:inputText id="tipoTCredito" value="#{transaccionMBean.tipoTCredito}" title="TipoTCredito" required="true" requiredMessage="The TipoTCredito field is required." maxlength="50" />
-                        <p:outputLabel value="FVenceTCredito:" for="FVenceTCredito" />
+                        
+                        <p:outputLabel for="tipoTCredito" value="TipoTCredito:" />
+                        <p:selectOneMenu id="tipoTCredito" value="#{transaccionMBean.tipoTCredito}" title="TipoTCredito" required="true" requiredMessage="The TipoTCredito field is required." maxlength="50" >
+                            <f:selectItem itemLabel="Seleccione una" itemValue="" />
+                            <f:selectItem itemLabel="Visa" itemValue="Visa" />
+                            <f:selectItem itemLabel="Mastercard" itemValue="Mastercard" />
+                            <f:selectItem itemLabel="Diners" itemValue="Diners" />
+                            <f:selectItem itemLabel="American Express" itemValue="American Express:" />
+                        </p:selectOneMenu>                
+
+                 <p:outputLabel value="FVenceTCredito:" for="FVenceTCredito" />
                         <p:inputText id="FVenceTCredito" value="#{transaccionMBean.fVenceTCredito}" title="FVenceTCredito" required="true" requiredMessage="The FVenceTCredito field is required." maxlength="7" />
-                        <p:outputLabel value="ValorTotal:" for="valorTotal" />
+
+
+                       
+                       <p:outputLabel value="ValorTotal:" for="valorTotal" />
                         <p:inputText id="valorTotal" value="#{transaccionMBean.valorTotal}" title="ValorTotal" required="true" requiredMessage="The ValorTotal field is required." readonly="true"/>
                     </h:panelGrid>
                     <br />

@@ -11,7 +11,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>/view/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -27,6 +27,6 @@
         <param-value>6Lf1mK8UAAAAAH_yP7aRz-aODJaY7Lqwx2Ej1CXa</param-value>
     </context-param>
     <welcome-file-list>
-        <welcome-file>faces/index.xhtml</welcome-file>
+        <welcome-file>view/index.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>
