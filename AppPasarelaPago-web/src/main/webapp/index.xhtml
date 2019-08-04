@@ -10,11 +10,11 @@
     
     <h:body>
         <br />
-        <h:link outcome="#{transaccionMBean.volverAInicio()}"  value="Volver al inicio" style="display: none"/>
+        <h:link outcome="#{transaccionMBean.volverAInicio()}" onclick="true" value="Volver al inicio" style="display: none"/>
         <br />
         <div class="container" style="text-align: center">
             <h1>
-                <h:link outcome="#{carritoMBean.irATienda()}" value="Ir a la tienda" class="btn btn-success btn-block"/>
+                <h:link outcome="#{carritoMBean.irATienda()}" value="Ir a la tienda"  class="btn btn-success btn-block"/>
             </h1>
             
             <div class="row">

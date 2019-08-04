@@ -178,7 +178,18 @@ public class TransaccionMBean implements Serializable
         String sCadena;
         sCadena=String.valueOf(numTCredito);
         sSubCadena=sCadena.substring(0, 5);
-        int val=Integer.parseInt(sSubCadena);
+        int val=Integer.parseInt(sSubCadena);        
+        //int valort;
+        //BigDecimal valor;
+        //valor=valorTotal;
+       // valort=valor.intValueExact();        
+        //if (valort>500 || valort<10000) {
+         //  FacesMessage message= new FacesMessage("Valor invalido debe estar entre $500 y $10000 ");
+         //  FacesContext context= FacesContext.getCurrentInstance();
+        //   context.addMessage(mybutton.getClientId(context), message);
+        //   disabled=true; 
+       // }
+        
         if(val>=11111 && val<=22222){
             FacesMessage message=new FacesMessage("Tarjeta American Express");
             FacesContext context=FacesContext.getCurrentInstance();
@@ -225,6 +236,8 @@ public class TransaccionMBean implements Serializable
            context.addMessage(mybutton.getClientId(context), message);
            disabled=true;
         }
+        
+        
         return null;
     }
     
